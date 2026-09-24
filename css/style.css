@@ -869,10 +869,11 @@ header {
     max-width: 295px;
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    gap: 30px;
   }
   .footer-menu__social {
     width: 93px;
+    margin: 0;
   }
   .footer-menu__wordmark-image {
     max-width: 207px;
