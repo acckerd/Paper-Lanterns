@@ -316,15 +316,18 @@ header
             display: none !important
 
     .detailes
-        margin-bottom: 76px
-        text-align: center
-        margin: 0 auto
+        .detailes
         max-width: 720px
-
-        display: block
         text-align: center
         margin: 0 auto
-        margin-bottom: 170px
+        display: flex
+        flex-direction: column
+        gap: 40px
+        margin-bottom: 106px
+        &__text-one,
+        &__text-second,
+        &__text-third
+            font-size: 30px
 
     .agenda
         max-width: 720px
