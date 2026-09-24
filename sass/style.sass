@@ -236,23 +236,24 @@ header
     display: flex
     align-items: center
     flex-direction: column
+    padding-top: 40px
     &__contact
         max-width: 1200px
-        padding-top: 40px
+        width: 100%    // ГАРАНТИРУЕМ, что блок растянется
+        margin-bottom: 120px
         display: flex
-        justify-content:  space-between
-        margin-bottom: 176px
+        justify-content: space-between
     &__link
         display: flex
-        justify-content:  space-between
+        gap: 130px
     &__text-one,
     &__text-second
         font-family: "Roboto Regular"
         font-size: 12px
     &__social
+        margin-left: auto
         max-width: 94px
         max-height: 16px
-        display: flex
         gap: 12px
     &__social-link
         transition: transform 0.3s ease
@@ -372,11 +373,9 @@ header
     .menu
         display: flex
         flex-direction: column
-        margin: 0 auto 16px
-        text-align: center
+        align-items: center
         gap: 40px
-        &__link-one
-            width: 267px
+        &__link-one,
         &__link-second
             width: 267px
 
