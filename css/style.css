@@ -449,6 +449,7 @@ header {
 
 .wordmark {
   text-align: center;
+  margin-bottom: 90px;
 }
 
 .intro {
@@ -587,26 +588,27 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 40px;
 }
 .footer-menu__contact {
   max-width: 1200px;
-  padding-top: 40px;
+  width: 100%;
+  margin-bottom: 120px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 176px;
 }
 .footer-menu__link {
   display: flex;
-  justify-content: space-between;
+  gap: 130px;
 }
 .footer-menu__text-one, .footer-menu__text-second {
   font-family: "Roboto Regular";
   font-size: 12px;
 }
 .footer-menu__social {
+  margin-left: auto;
   max-width: 94px;
   max-height: 16px;
-  display: flex;
   gap: 12px;
 }
 .footer-menu__social-link {
@@ -681,14 +683,16 @@ header {
     display: none !important;
   }
   .detailes {
-    margin-bottom: 76px;
-    text-align: center;
-    margin: 0 auto;
     max-width: 720px;
-    display: block;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 106px;
+  }
+  .detailes__text-one, .detailes__text-second, .detailes__text-third {
+    font-size: 30px;
   }
   .agenda {
     max-width: 720px;
@@ -743,14 +747,10 @@ header {
   .menu {
     display: flex;
     flex-direction: column;
-    margin: 0 auto 16px;
-    text-align: center;
+    align-items: center;
     gap: 40px;
   }
-  .menu__link-one {
-    width: 267px;
-  }
-  .menu__link-second {
+  .menu__link-one, .menu__link-second {
     width: 267px;
   }
   .header {
