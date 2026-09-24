@@ -1,7 +1,6 @@
 @use 'resets'
 @use 'normalizes'
 
-
 @font-face
   font-family: "Roboto Condensed"
   src: url('../font/RobotoCondensed-Bold.ttf') format('truetype')
@@ -23,7 +22,6 @@
     100% 
         transform: scale(1) rotate(360deg)
         opacity: 1
-
 
 @keyframes moveUp
     0%
@@ -62,7 +60,7 @@
 
 body
     background-color: #FBEAD6
-    min-width: 1280px
+
 .menu
     display: flex
     padding: 30px 30px 0 30px
@@ -100,33 +98,29 @@ body
 header
     margin-bottom: 62px
     text-align: center
-    max-width: 1280px
-    max-height: 957px
     margin: 0 auto
 .header-image
     position: relative
-    max-width: 1280px
-    max-height: 640px
+    max-width: 640px
+    margin: 0 auto
     margin-bottom: 67px
     &__logo
-        width: 640px
-        height: 640px
+        max-width: 640px
+        max-height: 640px
         animation: appearance 1.2s ease-out forwards        // запуск анимации прописанной сверху: имя анимации, длительность анимации, ease-out - значит, что анимация стартует быстро, заканчивается плавно, forwards - значит, что анимация зафиксируется, без этого элемент вернется в прежнее состояние
     &__badge
-        width: 197px
-        height: 197px
+        max-width: 197px
+        max-height: 197px
         position: absolute
-        left: 894px
-        top: 467px
+        left: 90%
+        top: 70%
 
 .wordmark
     text-align: center
 
-
 .intro
     text-align: center
     margin: 0 auto        // для выравнивания дивов
-    width: 100%
     max-width: 1200px
     &__text-mini
         font-family: "Roboto Condensed"
@@ -150,50 +144,39 @@ header
 .detailes
     text-align: center
     margin: 0 auto
-    max-width: 1200px
     display: flex
     flex-direction: column
     gap: 40px
     margin-bottom: 106px
-    &__text-one
-        font-family: "Roboto Condensed"
-        font-size: 40px
-    &__text-second
-        font-family: "Roboto Condensed"
-        font-size: 40px
+    &__text-one,
+    &__text-second,
     &__text-third
         font-family: "Roboto Condensed"
         font-size: 40px
+
 .gallery
     margin-bottom: 105px
     display: flex
     flex-direction: row
     overflow-x: scroll    // прокрутка
     scroll-behavior: smooth    //свойство определяющее поведение прокрутки
-    &__image-one
-        margin-right: 16px
-        text-align: center
-    &__pic-one
-        margin-bottom: 50px
-    &__image-second
-        margin-right: 16px
-        text-align: center
-    &__pic-second
-        margin-bottom: 50px
-    &__image-third
-        margin-right: 16px
-        text-align: center
-    &__pic-third
-        margin-bottom: 50px
+    &__image-one,
+    &__image-second,
+    &__image-third,
     &__image-fourth
-        margin-right: 16px
+        margin-bottom: 16px
         text-align: center
+        &:last-child
+            margin-bottom: 0
+    &__pic-one,
+    &__pic-second,
+    &__pic-third,
     &__pic-fourth
         margin-bottom: 50px
 
 .agenda
-    text-align: center
     max-width: 920px
+    text-align: center
     margin: 0 auto
     margin-bottom: 104px
     &__image-star
@@ -206,12 +189,12 @@ header
         margin-bottom: 60px
         border-top: 1px solid #000
         display: flex
+        gap: 128px
     &__time
         font-family: "Roboto Condensed"
         font-size: 20px
         max-width: 77px
         padding-top: 20px
-        margin-right: 128px
     &__content
         padding-top: 20px
         max-width: 716px
@@ -228,12 +211,14 @@ header
         text-align: left
 
 .about
-    text-align: center
     max-width: 1200px
-    margin: 0 auto
-    margin-bottom: 94px
+    text-align: center
+    margin: 0 auto 94px
     &__image
+        font-size: 40px
         margin-bottom: 80px
+    &__img
+        max-width: 1200px
     &__title
         font-family: "Roboto Condensed"
         font-size: 40px
@@ -241,27 +226,26 @@ header
     &__text
         font-family: "Roboto Regular"
         font-size: 20px
+        display: flex
+        flex-direction: column
+        gap: 20px
 
 .footer-menu
     background-color: #7AA4AD
-    min-width: 1280px
-    min-height: 600px
+    width: 100%
     display: flex
     align-items: center
     flex-direction: column
     &__contact
-        padding-top: 40px
         max-width: 1200px
-        max-height: 54px
+        padding-top: 40px
         display: flex
-        gap: 680px
+        justify-content:  space-between
         margin-bottom: 176px
     &__link
         display: flex
-        gap: 130px
-    &__text-one
-        font-family: "Roboto Regular"
-        font-size: 12px
+        justify-content:  space-between
+    &__text-one,
     &__text-second
         font-family: "Roboto Regular"
         font-size: 12px
@@ -274,39 +258,44 @@ header
         transition: transform 0.3s ease
         &:hover
             transform: scale(1.1)
+    &__wordmark
+        max-width: 1100px
 
-@media ( max-width: 1279px )
-    body 
-        width: 100%
-        .menu
-            max-width: 1279px
-            display: flex
-            gap: 232px
+@media (800px <= width <= 1279px)
+
+    .menu
+        display: flex
+        gap: 232px
+        text-align: center
+        margin: 0 auto
+        &__link-one
+            font-size: 40px
+        &__link-second
+            font-size: 40px
+
     header
         text-align: center
-        max-width: 1279px
-        max-height: 862px
         margin: 0 auto
         margin-bottom: 102px
-        .header-image
-            max-width: 1279px
-            position: relative
-            margin-bottom: 112px
-            &__logo
-                width: 612px
-                height: 612px
-            &__badge
-                position: absolute
-                left: 810px
-                top: 440px
-        .wordmark
-            &__text
-                width: 700px
-                height: 98px
+    .header-image
+        position: relative
+        margin-bottom: 112px
+        &__logo
+            width: 612px
+            height: 612px
+        &__badge
+            position: absolute
+            left: 70%
+            top: 440px
+
+    .wordmark
+        &__text
+            width: 700px
+            height: 98px
+
     .intro
         text-align: center
-        max-width: 1279px
-        margin: 0 auto
+        margin: 0 auto  
         margin-bottom: 166px
         &__text-mini
             display: inline-block
@@ -326,19 +315,178 @@ header
             display: none !important
 
     .detailes
-        max-width: 800px
         margin-bottom: 76px
-        &__text-one
-            max-width: 720px
-        &__text-second
-            max-width: 720px
-        &__text-third
-            max-width: 720px
+        text-align: center
+        margin: 0 auto
+        max-width: 720px
 
-
-    .gallery
-        max-width: 800px
-        max-height: 2750px
         display: block
         text-align: center
         margin: 0 auto
+        margin-bottom: 170px
+
+    .agenda
+        max-width: 720px
+
+    .about
+        &__img
+            width: 720px
+        &__title
+            font-size: 30px
+            max-width: 720px
+            margin: 0 auto 80px    // Оставляем нижний отступ
+        &__text
+            margin: 0 auto
+            max-width: 720px
+
+    .footer-menu
+        &__contact
+            padding-top: 40px
+            display: flex
+            gap: 176px
+            margin-bottom: 176px
+        &__link
+            display: flex
+            gap: 130px
+        &__text-one
+            font-family: "Roboto Regular"
+            font-size: 12px
+        &__text-second
+            font-family: "Roboto Regular"
+            font-size: 12px
+        &__social
+            max-width: 94px
+            max-height: 16px
+            display: flex
+            gap: 12px
+        &__social-link
+            transition: transform 0.3s ease
+            &:hover
+                transform: scale(1.1)
+        &__wordmark-image
+            max-width: 620px
+
+
+@media (1px <= width <= 799px)
+
+    .menu
+        display: flex
+        flex-direction: column
+        margin: 0 auto 16px
+        text-align: center
+        gap: 40px
+        &__link-one
+            width: 267px
+        &__link-second
+            width: 267px
+
+    .header
+        width: 100%
+        margin-bottom: 102px
+
+    .header-image
+        position: relative
+        margin-bottom: 112px
+        &__logo
+            width: 375px
+            height:375px
+        &__badge
+            width: 84px
+            height: 84px
+            position: absolute
+            left: 65%
+            top: 300px
+
+    .wordmark
+        &__text
+            width: 375px
+            height: 168px
+
+    .intro
+        margin: 0 auto 166px
+        text-align: center
+        max-width: 295px
+        &__text-mini
+            display: inline-block
+            margin-bottom: 40px
+        &__text-max
+            display: inline-block
+            margin-bottom: 142px
+        &__img
+            display: none !important
+        &__img-tablet
+            display: none !important
+        &__img-mobile
+            display: block !important
+            margin: 0 auto
+
+    .detailes
+        margin-bottom: 76px
+        max-width: 295px
+        &__text-one,
+        &__text-second,
+        &__text-third 
+            font-size: 30px
+
+    .gallery
+        margin: 0 auto 105px
+        max-width: 290px
+        display: flex
+        flex-direction: column
+        &__pic-one,
+        &__pic-second,
+        &__pic-third,
+        &__pic-fourth
+            width: 290px
+
+    .agenda
+        max-width:295px
+        &__image-star
+            margin-bottom: 40px
+        &__title
+            font-family: "Roboto Condensed"
+            font-size: 20px
+            margin-bottom: 60px
+        &__item
+            margin-bottom: 60px
+            border-top: 1px solid #000
+            display: flex
+            flex-direction: column
+            gap: 24px
+
+    .about
+        max-width: 295px
+        text-align: center
+        margin: 0 auto 94px
+        display: flex
+        flex-direction: column
+        &__img
+            max-width: 295px
+            margin-bottom: 80px
+        &__title
+            font-size: 20px
+        &__text
+            font-size: 20px
+            display: flex
+            flex-direction: column
+            gap: 20px
+
+    .footer-menu
+        width: 100%
+        display: flex
+        gap: 70px
+        &__contact
+            max-width: 295px
+            display: flex
+            flex-direction: column
+            gap: 64px
+            margin: 0 auto
+        &__link
+            max-width: 295px
+            display: flex
+            flex-direction: column
+            gap: 64px
+        &__social
+            width: 93px
+        &__wordmark-image
+            max-width: 207px
