@@ -390,6 +390,7 @@ body {
   justify-content: space-between;
 }
 .menu__link-one {
+  padding: 6px 15px;
   text-decoration: none;
   color: #FBEAD6;
   background-color: #2C2C2C;
@@ -404,6 +405,7 @@ body {
   transform: rotate(3deg);
 }
 .menu__link-second {
+  padding: 6px 15px;
   text-decoration: none;
   color: #FBEAD6;
   background-color: #2C2C2C;
@@ -422,25 +424,27 @@ body {
 
 header {
   margin-bottom: 62px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .header-image {
   position: relative;
+  max-width: 640px;
+  margin: 0 auto;
   margin-bottom: 67px;
 }
 .header-image__logo {
-  position: relative;
-  left: 360px;
-  width: 640px;
-  height: 640px;
+  max-width: 640px;
+  max-height: 640px;
   animation: appearance 1.2s ease-out forwards;
 }
 .header-image__badge {
-  width: 197px;
-  height: 197px;
+  max-width: 197px;
+  max-height: 197px;
   position: absolute;
-  left: 924px;
-  top: 483px;
+  left: 90%;
+  top: 70%;
 }
 
 .wordmark {
@@ -450,7 +454,6 @@ header {
 .intro {
   text-align: center;
   margin: 0 auto;
-  width: 100%;
   max-width: 1200px;
 }
 .intro__text-mini {
@@ -467,38 +470,28 @@ header {
 .intro__text-2 {
   margin: 0;
 }
+.intro__img {
+  display: block !important;
+  margin: 0 auto;
+}
+.intro__img-tablet {
+  display: none !important;
+}
+.intro__img-mobile {
+  display: none !important;
+}
 
 .detailes {
   text-align: center;
   margin: 0 auto;
-  max-width: 1200px;
-}
-.detailes__star-one {
-  margin-bottom: 40px;
-}
-.detailes__text-one {
-  font-family: "Roboto Condensed";
-  font-size: 40px;
-  height: 96px;
-  margin-bottom: 40px;
-}
-.detailes__star-second {
-  margin-bottom: 40px;
-}
-.detailes__text-second {
-  font-family: "Roboto Condensed";
-  font-size: 40px;
-  height: 96px;
-  margin-bottom: 40px;
-}
-.detailes__star-third {
-  margin-bottom: 40px;
-}
-.detailes__text-third {
-  font-family: "Roboto Condensed";
-  font-size: 40px;
-  height: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   margin-bottom: 106px;
+}
+.detailes__text-one, .detailes__text-second, .detailes__text-third {
+  font-family: "Roboto Condensed";
+  font-size: 40px;
 }
 
 .gallery {
@@ -508,38 +501,20 @@ header {
   overflow-x: scroll;
   scroll-behavior: smooth;
 }
-.gallery__image-one {
-  margin-right: 16px;
+.gallery__image-one, .gallery__image-second, .gallery__image-third, .gallery__image-fourth {
+  margin-bottom: 16px;
   text-align: center;
 }
-.gallery__pic-one {
-  margin-bottom: 50px;
+.gallery__image-one:last-child, .gallery__image-second:last-child, .gallery__image-third:last-child, .gallery__image-fourth:last-child {
+  margin-bottom: 0;
 }
-.gallery__image-second {
-  margin-right: 16px;
-  text-align: center;
-}
-.gallery__pic-second {
-  margin-bottom: 50px;
-}
-.gallery__image-third {
-  margin-right: 16px;
-  text-align: center;
-}
-.gallery__pic-third {
-  margin-bottom: 50px;
-}
-.gallery__image-fourth {
-  margin-right: 16px;
-  text-align: center;
-}
-.gallery__pic-fourth {
+.gallery__pic-one, .gallery__pic-second, .gallery__pic-third, .gallery__pic-fourth {
   margin-bottom: 50px;
 }
 
 .agenda {
-  text-align: center;
   max-width: 920px;
+  text-align: center;
   margin: 0 auto;
   margin-bottom: 104px;
 }
@@ -555,13 +530,13 @@ header {
   margin-bottom: 60px;
   border-top: 1px solid #000;
   display: flex;
+  gap: 128px;
 }
 .agenda__time {
   font-family: "Roboto Condensed";
   font-size: 20px;
   max-width: 77px;
   padding-top: 20px;
-  margin-right: 128px;
 }
 .agenda__content {
   padding-top: 20px;
@@ -582,13 +557,16 @@ header {
 }
 
 .about {
-  text-align: center;
   max-width: 1200px;
-  margin: 0 auto;
-  margin-bottom: 94px;
+  text-align: center;
+  margin: 0 auto 94px;
 }
 .about__image {
+  font-size: 40px;
   margin-bottom: 80px;
+}
+.about__img {
+  max-width: 1200px;
 }
 .about__title {
   font-family: "Roboto Condensed";
@@ -598,33 +576,30 @@ header {
 .about__text {
   font-family: "Roboto Regular";
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .footer-menu {
   background-color: #7AA4AD;
-  min-width: 1280px;
-  min-height: 600px;
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 .footer-menu__contact {
-  padding-top: 40px;
   max-width: 1200px;
-  max-height: 54px;
+  padding-top: 40px;
   display: flex;
-  gap: 680px;
+  justify-content: space-between;
   margin-bottom: 176px;
 }
 .footer-menu__link {
   display: flex;
-  gap: 130px;
+  justify-content: space-between;
 }
-.footer-menu__text-one {
-  font-family: "Roboto Regular";
-  font-size: 12px;
-}
-.footer-menu__text-second {
+.footer-menu__text-one, .footer-menu__text-second {
   font-family: "Roboto Regular";
   font-size: 12px;
 }
@@ -639,4 +614,267 @@ header {
 }
 .footer-menu__social-link:hover {
   transform: scale(1.1);
+}
+.footer-menu__wordmark {
+  max-width: 1100px;
+}
+
+@media (800px <= width <= 1279px) {
+  .menu {
+    display: flex;
+    gap: 232px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .menu__link-one {
+    font-size: 40px;
+  }
+  .menu__link-second {
+    font-size: 40px;
+  }
+  header {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 102px;
+  }
+  .header-image {
+    position: relative;
+    margin-bottom: 112px;
+  }
+  .header-image__logo {
+    width: 612px;
+    height: 612px;
+  }
+  .header-image__badge {
+    position: absolute;
+    left: 70%;
+    top: 440px;
+  }
+  .wordmark__text {
+    width: 700px;
+    height: 98px;
+  }
+  .intro {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 166px;
+  }
+  .intro__text-mini {
+    display: inline-block;
+    width: 720px;
+    height: 18px;
+    margin-bottom: 40px;
+  }
+  .intro__text-max {
+    display: inline-block;
+    width: 720px;
+    height: 108px;
+  }
+  .intro__img {
+    display: none !important;
+  }
+  .intro__img-tablet {
+    display: block !important;
+    margin: 0 auto;
+  }
+  .intro__img-mobile {
+    display: none !important;
+  }
+  .detailes {
+    margin-bottom: 76px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 720px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 170px;
+  }
+  .agenda {
+    max-width: 720px;
+  }
+  .about__img {
+    width: 720px;
+  }
+  .about__title {
+    font-size: 30px;
+    max-width: 720px;
+    margin: 0 auto 80px;
+  }
+  .about__text {
+    margin: 0 auto;
+    max-width: 720px;
+  }
+  .footer-menu__contact {
+    padding-top: 40px;
+    display: flex;
+    gap: 176px;
+    margin-bottom: 176px;
+  }
+  .footer-menu__link {
+    display: flex;
+    gap: 130px;
+  }
+  .footer-menu__text-one {
+    font-family: "Roboto Regular";
+    font-size: 12px;
+  }
+  .footer-menu__text-second {
+    font-family: "Roboto Regular";
+    font-size: 12px;
+  }
+  .footer-menu__social {
+    max-width: 94px;
+    max-height: 16px;
+    display: flex;
+    gap: 12px;
+  }
+  .footer-menu__social-link {
+    transition: transform 0.3s ease;
+  }
+  .footer-menu__social-link:hover {
+    transform: scale(1.1);
+  }
+  .footer-menu__wordmark-image {
+    max-width: 620px;
+  }
+}
+@media (1px <= width <= 799px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 16px;
+    text-align: center;
+    gap: 40px;
+  }
+  .menu__link-one {
+    width: 267px;
+  }
+  .menu__link-second {
+    width: 267px;
+  }
+  .header {
+    width: 100%;
+    margin-bottom: 102px;
+  }
+  .header-image {
+    position: relative;
+    margin-bottom: 112px;
+  }
+  .header-image__logo {
+    width: 375px;
+    height: 375px;
+  }
+  .header-image__badge {
+    width: 84px;
+    height: 84px;
+    position: absolute;
+    left: 65%;
+    top: 300px;
+  }
+  .wordmark__text {
+    width: 375px;
+    height: 168px;
+  }
+  .intro {
+    margin: 0 auto 166px;
+    text-align: center;
+    max-width: 295px;
+  }
+  .intro__text-mini {
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+  .intro__text-max {
+    display: inline-block;
+    margin-bottom: 142px;
+  }
+  .intro__img {
+    display: none !important;
+  }
+  .intro__img-tablet {
+    display: none !important;
+  }
+  .intro__img-mobile {
+    display: block !important;
+    margin: 0 auto;
+  }
+  .detailes {
+    margin-bottom: 76px;
+    max-width: 295px;
+  }
+  .detailes__text-one, .detailes__text-second, .detailes__text-third {
+    font-size: 30px;
+  }
+  .gallery {
+    margin: 0 auto 105px;
+    max-width: 290px;
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery__pic-one, .gallery__pic-second, .gallery__pic-third, .gallery__pic-fourth {
+    width: 290px;
+  }
+  .agenda {
+    max-width: 295px;
+  }
+  .agenda__image-star {
+    margin-bottom: 40px;
+  }
+  .agenda__title {
+    font-family: "Roboto Condensed";
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+  .agenda__item {
+    margin-bottom: 60px;
+    border-top: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .about {
+    max-width: 295px;
+    text-align: center;
+    margin: 0 auto 94px;
+    display: flex;
+    flex-direction: column;
+  }
+  .about__img {
+    max-width: 295px;
+    margin-bottom: 80px;
+  }
+  .about__title {
+    font-size: 20px;
+  }
+  .about__text {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-menu {
+    width: 100%;
+    display: flex;
+    gap: 70px;
+  }
+  .footer-menu__contact {
+    max-width: 295px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    margin: 0 auto;
+  }
+  .footer-menu__link {
+    max-width: 295px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  .footer-menu__social {
+    width: 93px;
+  }
+  .footer-menu__wordmark-image {
+    max-width: 207px;
+  }
 }
