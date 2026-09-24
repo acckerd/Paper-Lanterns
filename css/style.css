@@ -751,7 +751,7 @@ header {
     gap: 40px;
   }
   .menu__link-one, .menu__link-second {
-    width: 267px;
+    font-size: 35px;
   }
   .header {
     width: 100%;
