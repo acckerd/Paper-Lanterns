@@ -58,6 +58,9 @@
 *
     margin: 0
 
+html, body, a, button
+    cursor: none
+
 body
     background-color: #FBEAD6
 
@@ -262,6 +265,20 @@ header
             transform: scale(1.1)
     &__wordmark
         max-width: 1100px
+.custom-cursor
+    width: 30px
+    height: 30px
+    position: fixed
+    pointer-events: none
+    z-index: 9999
+    transform: translate(-50%, -50%)
+    background-image: url('../icons/Star-7.svg')
+    background-size: contain    // масштабирует картинку под размеры 30х30рх
+    background-repeat: no-repeat    // не дублирует картинку знизу, по бокам и тд
+    background-position: center    // выравнивает внутри блока
+    transition: transform 0.3s ease 
+    &._hovered
+        transform: translate(-50%, -50%) scale(1.5) rotate(45deg)
 
 @media (800px <= width <= 1279px)
 
