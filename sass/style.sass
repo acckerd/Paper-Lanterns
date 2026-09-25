@@ -17,7 +17,7 @@
 
 @keyframes appearance        // директива, которая задает сценарий анимации
     0% 
-        transform: scale(0.5) rotate(0deg)                // scale размер в начале анимации, rotate поворот в начале анимации
+        transform: scale(0.5) rotate(0deg)         // scale размер в начале анимации, rotate поворот в начале анимации
         opacity: 0               // прозрачность
     100% 
         transform: scale(1) rotate(360deg)
@@ -78,7 +78,7 @@ body
         font-weight: bold
         font-size: 45px
         display: inline-block        //transform не работает на строчных элементах, поэтому его нужно превратить в блочный
-        transform: scale(0.9)
+        transform: scale(0.8)
         transition: transform 0.3s ease-out
         &:hover
             transform: rotate(3deg) 
@@ -93,7 +93,7 @@ body
         display: flex
         justify-content: center
         display: inline-block        //transform не работает на строчных элементах, поэтому его нужно превратить в блочный
-        transform: scale(0.9) 
+        transform: scale(0.8) 
         transition: transform 0.3s ease-out
         &:hover
             transform: rotate(-3deg) 
@@ -265,6 +265,7 @@ header
             transform: scale(1.1)
     &__wordmark
         max-width: 1100px
+
 .custom-cursor
     width: 30px
     height: 30px
@@ -281,7 +282,6 @@ header
         transform: translate(-50%, -50%) scale(1.5) rotate(45deg)
 
 @media (800px <= width <= 1279px)
-
     .menu
         display: flex
         gap: 232px
@@ -389,7 +389,6 @@ header
 
 
 @media (1px <= width <= 799px)
-
     .menu
         display: flex
         flex-direction: column
