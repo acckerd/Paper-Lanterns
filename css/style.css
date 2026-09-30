@@ -626,20 +626,20 @@ header {
 }
 
 .custom-cursor {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   position: fixed;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  background-image: url("../icons/Star-7.svg");
+  background-image: url("../icons/Star-cursor.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   transition: transform 0.3s ease;
 }
 .custom-cursor._hovered {
-  transform: translate(-50%, -50%) scale(1.5) rotate(45deg);
+  transform: translate(-50%, -50%) scale(2) rotate(45deg);
 }
 
 @media (800px <= width <= 1279px) {
