@@ -13,3 +13,14 @@ links.forEach((link) => {
     cursor.classList.remove("_hovered")
   })
 })
+
+const zoomPic = document.querySelectorAll("[class*='gallery__pic-']")
+
+zoomPic.forEach((pic) => {
+  pic.addEventListener("mouseenter", () => {
+    pic.classList.add("_zoom")
+  })
+  pic.addEventListener("mouseleave", () => {
+    pic.classList.remove("_zoom")
+  })
+})

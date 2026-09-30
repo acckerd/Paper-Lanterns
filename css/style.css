@@ -515,6 +515,11 @@ header {
 }
 .gallery__pic-one, .gallery__pic-second, .gallery__pic-third, .gallery__pic-fourth {
   margin-bottom: 50px;
+  transition: transform 0.3s ease;
+}
+.gallery__pic-one._zoom, .gallery__pic-second._zoom, .gallery__pic-third._zoom, .gallery__pic-fourth._zoom {
+  transform: scale(1.15);
+  z-index: 100;
 }
 
 .agenda {
