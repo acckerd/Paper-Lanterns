@@ -647,6 +647,11 @@ header {
   transform: translate(-50%, -50%) scale(2) rotate(45deg);
 }
 
+@media (pointer: coarse) {
+  body, a, button, select, input {
+    cursor: none !important;
+  }
+}
 @media (800px <= width <= 1279px) {
   .menu {
     display: flex;
@@ -908,8 +913,5 @@ header {
   }
   .footer-menu__wordmark-image {
     max-width: 207px;
-  }
-  .custom-cursor {
-    display: none;
   }
 }

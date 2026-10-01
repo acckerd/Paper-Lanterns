@@ -285,6 +285,9 @@ header
     &._hovered
         transform: translate(-50%, -50%) scale(2) rotate(45deg)
 
+@media (pointer: coarse) 
+    body, a, button, select, input 
+        cursor: none !important
 
 @media (800px <= width <= 1279px)
     .menu
@@ -518,6 +521,3 @@ header
             margin: 0 
         &__wordmark-image
             max-width: 207px
-        
-    .custom-cursor
-        display: none
