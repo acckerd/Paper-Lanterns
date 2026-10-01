@@ -909,4 +909,7 @@ header {
   .footer-menu__wordmark-image {
     max-width: 207px;
   }
+  .custom-cursor {
+    display: none;
+  }
 }
