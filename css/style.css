@@ -342,7 +342,7 @@ template {
     opacity: 1;
   }
 }
-#text-mini, #text-max, #image, #detailes, #gallery, #image-star, #agenda__title, #item-one, #item-second, #item-third, #item-fourth, #about__image, #about__title, #about__text {
+#text-mini, #text-max, #image, #details, #gallery, #image-star, #agenda__title, #item-one, #item-second, #item-third, #item-fourth, #about__image, #about__title, #about__text {
   animation: moveUp both;
   animation-timeline: view();
 }
@@ -359,7 +359,7 @@ template {
   --offset: 15vh;
 }
 
-#detailes {
+#details {
   --offset: 20vh;
 }
 
@@ -486,7 +486,7 @@ header {
   display: none !important;
 }
 
-.detailes {
+.details {
   text-align: center;
   margin: 0 auto;
   display: flex;
@@ -494,7 +494,7 @@ header {
   gap: 40px;
   margin-bottom: 106px;
 }
-.detailes__text-one, .detailes__text-second, .detailes__text-third {
+.details__text-one, .details__text-second, .details__text-third {
   font-family: "Roboto Condensed";
   font-size: 40px;
 }
@@ -708,7 +708,7 @@ header {
   .intro__img-mobile {
     display: none !important;
   }
-  .detailes {
+  .details {
     max-width: 720px;
     text-align: center;
     margin: 0 auto;
@@ -717,7 +717,7 @@ header {
     gap: 40px;
     margin-bottom: 106px;
   }
-  .detailes__text-one, .detailes__text-second, .detailes__text-third {
+  .details__text-one, .details__text-second, .details__text-third {
     font-size: 30px;
   }
   .agenda {
@@ -825,11 +825,11 @@ header {
     display: block !important;
     margin: 0 auto;
   }
-  .detailes {
+  .details {
     margin-bottom: 76px;
     max-width: 295px;
   }
-  .detailes__text-one, .detailes__text-second, .detailes__text-third {
+  .details__text-one, .details__text-second, .details__text-third {
     font-size: 30px;
   }
   .gallery {
