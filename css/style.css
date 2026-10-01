@@ -647,11 +647,6 @@ header {
   transform: translate(-50%, -50%) scale(2) rotate(45deg);
 }
 
-@media (pointer: coarse) {
-  body, a, button, select, input {
-    cursor: none !important;
-  }
-}
 @media (800px <= width <= 1279px) {
   .menu {
     display: flex;
@@ -848,7 +843,7 @@ header {
     transition: transform 0.3s ease;
   }
   .gallery__pic-one._zoom, .gallery__pic-second._zoom, .gallery__pic-third._zoom, .gallery__pic-fourth._zoom {
-    transform: scale(1.1);
+    transform: scale(1.05);
     z-index: 100;
   }
   .agenda {
