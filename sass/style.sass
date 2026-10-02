@@ -31,29 +31,9 @@
         transform: translateY(0)
         opacity: 1
 
-#text-mini, #text-max, #image, #details, #gallery, #image-star, #agenda__title, #item-one, #item-second, #item-third, #item-fourth, #about__image, #about__title, #about__text        // подключаем анимацию сразу группе элементов id
+.scroll-anim   // подключаем анимацию сразу к общему классу
     animation: moveUp both
     animation-timeline: view()
-
-// Применяем индивидуальные настройки через #
-#text-mini
-    --offset: 5vh
-#text-max
-    --offset: 10vh
-#image
-    --offset: 15vh
-#details
-    --offset: 20vh
-#image-star, #agenda__title
-    --offset: 25vh
-#item-one, #item-second, #item-third, #item-fourth
-    --offset: 30vh   
-#about__image
-    --offset: 35vh
-// #about__title
-//     --offset:35vh
-// #about__text
-//     --offset:35vh
 
 *
     margin: 0
@@ -69,20 +49,7 @@ body
     padding: 30px 30px 0 30px
     margin-bottom: 16px
     justify-content: space-between
-    &__link-one
-        padding: 6px 15px
-        text-decoration: none
-        color: #FBEAD6
-        background-color: #2C2C2C
-        font-family: Roboto Condensed
-        font-weight: bold
-        font-size: 45px
-        display: inline-block        //transform не работает на строчных элементах, поэтому его нужно превратить в блочный
-        transform: scale(0.8)
-        transition: transform 0.3s ease-out
-        &:hover
-            transform: rotate(3deg) 
-    &__link-second
+    &__link-right, &__link-left
         padding: 6px 15px
         text-decoration: none
         color: #FBEAD6
@@ -90,23 +57,25 @@ body
         font-family: Roboto Condensed
         font-weight: bold
         font-size: 50px
-        display: flex
-        justify-content: center
         display: inline-block        //transform не работает на строчных элементах, поэтому его нужно превратить в блочный
-        transform: scale(0.8) 
+        transform: scale(0.8)
         transition: transform 0.3s ease-out
+        &:hover
+            transform: rotate(3deg) 
+    &__link-left
         &:hover
             transform: rotate(-3deg) 
 
-header
+.header
+    max-width: 1200px
     margin-bottom: 62px
     text-align: center
     margin: 0 auto
-.header-image
-    position: relative
-    max-width: 640px
-    margin: 0 auto
-    margin-bottom: 67px
+    &__image
+        position: relative
+        max-width: 640px
+        margin: 0 auto
+        margin-bottom: 67px
     &__logo
         max-width: 640px
         max-height: 640px
@@ -117,10 +86,11 @@ header
         position: absolute
         left: 90%
         top: 70%
-
-.wordmark
-    text-align: center
-    margin-bottom: 90px
+    &__wordmark
+        text-align: center
+        margin-bottom: 90px
+    &__wordmark-image
+        width: 100%
 
 .intro
     text-align: center
@@ -135,15 +105,13 @@ header
         font-size: 30px
         font-family: "Roboto Condensed"
         margin-bottom: 142px
-    &__text-2
-        margin: 0
     &__img
-        display: block !important    // ключевое слово, которое делает конкретное стилевое правило самым главным и отменяет любые другие правила для этого свойства
+        display: block 
         margin: 0 auto
     &__img-tablet
-        display: none !important
+        display: none 
     &__img-mobile
-        display: none !important
+        display: none 
 
 .details
     text-align: center
@@ -152,9 +120,7 @@ header
     flex-direction: column
     gap: 40px
     margin-bottom: 106px
-    &__text-one,
-    &__text-second,
-    &__text-third
+    &__text
         font-family: "Roboto Condensed"
         font-size: 40px
 
@@ -164,18 +130,12 @@ header
     flex-direction: row
     overflow-x: scroll    // прокрутка
     scroll-behavior: smooth    //свойство определяющее поведение прокрутки
-    &__image-one,
-    &__image-second,
-    &__image-third,
-    &__image-fourth
+    &__image
         margin-bottom: 16px
         text-align: center
         &:last-child
             margin-bottom: 0
-    &__pic-one,
-    &__pic-second,
-    &__pic-third,
-    &__pic-fourth
+    &__pic
         margin-bottom: 50px
         transition: transform 0.3s ease
         &._zoom
@@ -187,9 +147,9 @@ header
     text-align: center
     margin: 0 auto
     margin-bottom: 104px
-    &__image-star
+    &__star
         margin-bottom: 40px
-    &__title
+    &__hero-title
         font-family: "Roboto Condensed"
         font-size: 40px
         margin-bottom: 60px
@@ -203,13 +163,13 @@ header
         font-size: 20px
         max-width: 77px
         padding-top: 20px
-    &__content
+    &__box
         padding-top: 20px
-        max-width: 716px
+        width: 72%
         display: flex
         align-items: flex-start
         flex-direction: column
-    &__title-content
+    &__title
         font-family: "Roboto Condensed"
         font-size: 20px
         margin-bottom: 16px
@@ -225,37 +185,36 @@ header
     &__image
         font-size: 40px
         margin-bottom: 80px
-    &__img
-        max-width: 1200px
+    &__pic
+        max-width: 100%
     &__title
         font-family: "Roboto Condensed"
         font-size: 40px
         margin-bottom: 80px
-    &__text
+    &__content
         font-family: "Roboto Regular"
         font-size: 20px
         display: flex
         flex-direction: column
         gap: 20px
 
-.footer-menu
+.footer
     background-color: #7AA4AD
     width: 100%
     display: flex
     align-items: center
     flex-direction: column
     padding-top: 40px
-    &__contact
+    &__menu
         max-width: 1200px
-        width: 100%    // ГАРАНТИРУЕМ, что блок растянется
+        width: 100%
         margin-bottom: 120px
         display: flex
         justify-content: space-between
-    &__link
+    &__contact
         display: flex
         gap: 130px
-    &__text-one,
-    &__text-second
+    &__text
         font-family: "Roboto Regular"
         font-size: 12px
     &__social
@@ -291,51 +250,48 @@ header
         gap: 232px
         text-align: center
         margin: 0 auto
-        &__link-one
-            font-size: 40px
-        &__link-second
+        &__link-right, &__link-left
             font-size: 40px
 
-    header
+    .header
+        max-width: 720px
         text-align: center
         margin: 0 auto
         margin-bottom: 102px
-    .header-image
-        position: relative
-        margin-bottom: 112px
+        &__header-image
+            position: relative
+            margin-bottom: 112px
         &__logo
             width: 612px
             height: 612px
         &__badge
             position: absolute
             left: 70%
-            top: 440px
+            top: 75%
+        &__wordmark-image
+            width: 100%
 
-    .wordmark
-        &__text
-            width: 700px
-            height: 98px
 
     .intro
+        max-width: 720px
         text-align: center
         margin: 0 auto  
         margin-bottom: 166px
         &__text-mini
             display: inline-block
-            width: 720px
+            width: 100%
             height: 18px
             margin-bottom: 40px
         &__text-max
             display: inline-block
-            width: 720px
-            height: 108px
+            width: 100%
         &__img
-            display: none !important
+            display: none 
         &__img-tablet
-            display: block !important
+            display: block 
             margin: 0 auto
         &__img-mobile
-            display: none !important
+            display: none 
 
     .details
         max-width: 720px
@@ -345,51 +301,50 @@ header
         flex-direction: column
         gap: 40px
         margin-bottom: 106px
-        &__text-one,
-        &__text-second,
-        &__text-third
+        &__text
             font-size: 30px
+
+    .gallery
+        max-width: 720px
+        display: flex
+        flex-direction: column
+        margin: 0 auto 170px
+        &__image
+            max-width: 540px
+            margin: 0 auto
+        &__pic
+            width: 100%
+            height: auto
 
     .agenda
         max-width: 720px
+        margin: 0 auto
+
 
     .about
-        &__img
-            width: 720px
+        max-width: 720px
         &__title
+            width: 100%
             font-size: 30px
-            max-width: 720px
             margin: 0 auto 80px    // Оставляем нижний отступ
         &__text
             margin: 0 auto
-            max-width: 720px
+            width: 100%
 
-    .footer-menu
+    .footer
+        width: 100%
+        &__menu
+            max-width: 720px
         &__contact
-            padding-top: 40px
-            display: flex
-            gap: 176px
-            margin-bottom: 176px
-        &__link
-            display: flex
-            gap: 130px
-        &__text-one
-            font-family: "Roboto Regular"
-            font-size: 12px
-        &__text-second
-            font-family: "Roboto Regular"
-            font-size: 12px
+            width: 62%
         &__social
-            max-width: 94px
-            max-height: 16px
-            display: flex
-            gap: 12px
-        &__social-link
-            transition: transform 0.3s ease
-            &:hover
-                transform: scale(1.1)
+            width: 14%
+        &__wordmark
+            max-width: 720px
+            text-align: center
         &__wordmark-image
-            max-width: 620px
+            width: 86%
+
 
 
 @media (1px <= width <= 799px)
@@ -455,10 +410,7 @@ header
         max-width: 290px
         display: flex
         flex-direction: column
-        &__pic-one,
-        &__pic-second,
-        &__pic-third,
-        &__pic-fourth
+        &__pic
             width: 290px
             transition: transform 0.3s ease
             &._zoom

@@ -14,7 +14,7 @@ links.forEach((link) => {
   })
 })
 
-const zoomPic = document.querySelectorAll("[class*='gallery__pic-']")
+const zoomPic = document.querySelectorAll(".gallery__pic")
 
 zoomPic.forEach((pic) => {
   pic.addEventListener("mouseenter", () => {

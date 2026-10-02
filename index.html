@@ -9,102 +9,102 @@
 
   <body>
     <nav class="menu">
-      <div class="menu__link">
-        <a class="menu__link-one" href="#">Crest Middle</a>
+      <div class="menu__item">
+        <a class="menu__link-right" href="#">Crest Middle</a>
       </div>
-      <div class="menu__link">
-        <a class="menu__link-second" href="#">Contact Us</a>
+      <div class="menu__item">
+        <a class="menu__link-left" href="#">Contact Us</a>
       </div>
     </nav>
 
-    <header>
-      <div class="header-image">
-        <img src="img/logo.png" class="header-image__logo" />
-        <img src="icons/Badge.svg" alt="" class="header-image__badge" />
+    <header class="header">
+      <div class="header__image">
+        <img src="img/logo.png" class="header__logo" />
+        <img src="icons/Badge.svg" alt="" class="header__badge" />
       </div>
 
-      <div class="wordmark">
-        <img src="img/PaperLanterns.svg" alt="" class="wordmark__text" />
+      <div class="header__wordmark">
+        <img class="header__wordmark-image" src="img/PaperLanterns.svg" alt=""/>
       </div>
     </header>
 
     <main>
       <section class="intro">
-        <div id="text-mini" class="intro__text-mini">
-          <p class="intro__text-2">33rd Annual Lantern Festival</p>
+        <div class="intro__text-mini scroll-anim" style="--ofset: 5vh">
+          <p>33rd Annual Lantern Festival</p>
         </div>
 
-        <div id="text-max" class="intro__text-max">
-          <p class="intro__text-2">
+        <div class="intro__text-max scroll-anim" style="--ofset: 10vh">
+          <p>
             We invite you to our enchanting festival, where light, creativity,
             and tradition come together to illuminate the night sky in a
             breathtaking celebration of culture and artistry.
           </p>
         </div>
 
-        <div id="image" class="intro__image">
+        <div class="intro__image scroll-anim" style="--ofset: 15vh">
           <img class="intro__img" src="img/intro.png" alt="" />
           <img class="intro__img-tablet" src="img/intro-tablet.png" alt="" />
           <img class="intro__img-mobile" src="img/intro-mobile.png" alt="" />
         </div>
       </section>
 
-      <section id="details" class="details">
-        <div class="details-one">
-          <img src="icons/Star 7-1.svg" alt="" />
+      <section class="details scroll-anim" style="--ofset: 25vh">
+        <div class="details-star">
+          <img src="icons/Star-black.svg" alt="" />
         </div>
 
-        <div class="details__text-one">
+        <div class="details__text">
           <h3>Tuesday, feb 17,<br>
           2026 6:00 – 9:00 PM</h3>
         </div>
 
-        <div class="details__star-second">
-          <img src="icons/Star 7-1.svg" alt="" />
+        <div class="details__star">
+          <img src="icons/Star-black.svg" alt="" />
         </div>
 
-        <div class="details__text-second">
+        <div class="details__text">
           <h3>Westwood Crest Middle School<br>
           2415 Candyland Lane, Los Angeles, CA 90025</h3>
         </div>
 
-        <div class="details__star-third">
-          <img src="icons/Star 7-1.svg" alt="" />
+        <div class="details__star">
+          <img src="icons/Star-black.svg" alt="" />
         </div>
 
-        <div class="details__text-third">
+        <div class="details__text">
           <h3>food catered by</h3>
           <h3>Henry’s Hunan restaurant</h3>
         </div>
       </section>
 
-      <section id="gallery" class="gallery">
-        <div class="gallery__image-one">
-          <img class="gallery__pic-one" src="img/Image.png" alt="" />
+      <section class="gallery scroll-anim" style="--ofset: 30vh">
+        <div class="gallery__image">
+          <img class="gallery__pic" src="img/Image.png" alt="" />
           <p class="gallery__text-one">
             Item: 005 <br />
             Papierlaternen-Fabrik Riethmüller
           </p>
         </div>
 
-        <div class="gallery__image-second">
-          <img class="gallery__pic-second" src="img/Image2.png" alt="" />
+        <div class="gallery__image">
+          <img class="gallery__pic" src="img/Image2.png" alt="" />
           <p class="gallery__text-second">
             Item: 001 <br />
             Papierlaternen-Fabrik Riethmüller
           </p>
         </div>
 
-        <div class="gallery__image-third">
-          <img class="gallery__pic-third" src="img/Image3.png" alt="" />
+        <div class="gallery__image">
+          <img class="gallery__pic" src="img/Image3.png" alt="" />
           <p class="gallery__text-third">
             Item: 002 <br />
             Papierlaternen-Fabrik Riethmüller
           </p>
         </div>
 
-        <div class="gallery__image-fourth">
-          <img class="gallery__pic-fourth" src="img/Image.png" alt="" />
+        <div class="gallery__image">
+          <img class="gallery__pic" src="img/Image.png" alt="" />
           <p class="gallery__text-fourth">
             Item: 005 <br />
             Papierlaternen-Fabrik Riethmüller
@@ -113,18 +113,18 @@
       </section>
 
       <section class="agenda">
-        <div id="image-star" class="agenda__image-star">
-          <img src="icons/Star 7.svg" alt="" />
+        <div class="agenda__star scroll-anim" style="--ofset: 35vh">
+          <img src="icons/Star-black.svg" alt="" />
         </div>
 
-        <div id="agenda__title" class="agenda__title">
+        <div class="agenda__hero-title scroll-anim" style="--ofset: 35vh">
           <h2>FESTIVAL AGENDA</h2>
         </div>
 
-        <div id="item-one" class="agenda__item">
+        <div class="agenda__item scroll-anim" style="--ofset: 40vh">
           <p class="agenda__time">5:30 PM</p>
-          <div class="agenda__content">
-            <p class="agenda__title-content">ARRIVAL</p>
+          <div class="agenda__box">
+            <p class="agenda__title">ARRIVAL</p>
             <p class="agenda__text">
               Welcome and gather. Enjoy the ambiance as the lanterns are
               prepared for illumination.
@@ -132,10 +132,10 @@
           </div>
         </div>
 
-        <div id="item-second" class="agenda__item">
+        <div class="agenda__item scroll-anim" style="--ofset: 40vh">
           <p class="agenda__time">7:00 PM</p>
-          <div class="agenda__content">
-            <p class="agenda__title-content">OPENING CEREMONY</p>
+          <div class="agenda__box">
+            <p class="agenda__title">OPENING CEREMONY</p>
             <p class="agenda__text">
               Principal Gardella introduces the history and significance of the
               festival, especially the cultural importance of paper lanterns.
@@ -143,36 +143,36 @@
           </div>
         </div>
 
-        <div id="item-third" class="agenda__item">
+        <div class="agenda__item scroll-anim" style="--ofset: 40vh">
           <p class="agenda__time">7:30 PM</p>
-          <div class="agenda__content">
-            <p class="agenda__title-content">LANTERN LIGHTING</p>
+          <div class="agenda__box">
+            <p class="agenda__title">LANTERN LIGHTING</p>
             <p class="agenda__text">
               Experience the magical illumination of the paper lanterns..
             </p>
           </div>
         </div>
 
-        <div id="item-fourth" class="agenda__item">
+        <div class="agenda__item scroll-anim" style="--ofset: 40vh">
           <p class="agenda__time">8:30 PM</p>
-          <div class="agenda__content">
-            <p class="agenda__title-content">WRAP UP</p>
+          <div class="agenda__box">
+            <p class="agenda__title">WRAP UP</p>
             <p class="agenda__text">Thank you’s and closing remarks</p>
           </div>
         </div>
       </section>
 
       <section class="about">
-        <div id="about__image" class="about__image">
-          <img class="about__img" src="img/about.png" alt="" />
+        <div class="about__image scroll-anim" style="--ofset: 45vh">
+          <img class="about__pic" src="img/about.png" alt="" />
         </div>
 
-        <div id="about__title" class="about__title">
+        <div class="about__title scroll-anim" style="--ofset: 50vh">
           <h2>About the PAPER LANTERNS festival</h2>
         </div>
 
-        <div id="about__text" class="about__text">
-          <p class="about__text-1">
+        <div class="about__content scroll-anim" style="--ofset: 45vh">
+          <p class="about__text">
             Since 1992, Westwood Crest Middle School has proudly hosted its
             beloved 'Paper Lanterns' event, a cherished tradition woven into the
             fabric of our school community. Inspired by the rich history of the
@@ -181,7 +181,7 @@
             luminous creations.
           </p>
 
-          <p class="about__text-2">
+          <p class="about__text">
             Over the years, 'Paper Lanterns' has grown into a vibrant
             celebration, deeply valued by students, staff, and families alike.
             Each year, we honor the ancient art of lantern-making and the
@@ -194,55 +194,39 @@
       </section>
     </main>
 
-    <footer class="footer-menu">
-      <div class="footer-menu__contact">
-        <div class="footer-menu__link">
-          <p class="footer-menu__text-one">
+    <footer class="footer">
+      <div class="footer__menu">
+        <div class="footer__contact">
+          <p class="footer__text">
             Westwood Crest Middle School <br />
             2415 Candyland Lane <br />
             Los Angeles, CA 90025
           </p>
 
-          <p class="footer-menu__text-second">
+          <p class="footer__text">
             PAPER LANTERNS © 2025 <br />
             hello@figma.com <br />
             646.555.1234
           </p>
         </div>
-        <div class="footer-menu__social">
-          <a class="footer-menu__social-icon" href="#"
-            ><img
-              class="footer-menu__social-link"
-              src="icons/Facebook.svg"
-              alt=""
-          /></a>
-          <a class="footer-menu__social-link" href="#"
-            ><img
-              class="footer-menu__social-link"
-              src="icons/Instagram.svg"
-              alt=""
-          /></a>
-          <a class="footer-menu__social-link" href="#"
-            ><img
-              class="footer-menu__social-icon"
-              src="icons/TikTok.svg"
-              alt=""
-          /></a>
-          <a class="footer-menu__social-link" href="#"
-            ><img
-              class="footer-menu__social-icon"
-              src="icons/Youtube.svg"
-              alt=""
-          /></a>
+        <div class="footer__social">
+          <a class="footer__social-link" href="#">
+            <img class="footer__social-icon" src="icons/Facebook.svg" alt=""/>
+          </a>
+          <a class="ooter__social-link" href="#">
+            <img class="footer__social-icon" src="icons/Instagram.svg" alt=""/>
+          </a>
+          <a class="ooter__social-link" href="#">
+            <img class="footer__social-icon" src="icons/TikTok.svg" alt=""/>
+          </a>
+          <a class="footer__social-link" href="#">
+            <img class="footer__social-icon" src="icons/Youtube.svg" alt=""/>
+          </a>
         </div>
       </div>
 
-      <div class="footer-menu__wordmark">
-        <img
-          class="footer-menu__wordmark-image"
-          src="img/Wordmark.svg"
-          alt=""
-        />
+      <div class="footer__wordmark">
+        <img class="footer__wordmark-image"  src="img/Wordmark.svg" alt=""/>
       </div>
     </footer>
 
