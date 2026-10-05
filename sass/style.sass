@@ -32,16 +32,16 @@
         opacity: 1
 
 :root
-    // color
+    /*color*/
     --main-color: #FBEAD6
     --second-primary-color: #2C2C2C
     --footer-color: #7AA4AD
 
-    // font
+    /*font*/
     --header: "Roboto Condensed"
     --main-font: "Roboto Regular"
 
-    // base font size
+    /*base font size*/
     --header-size: 40px
     --highlighted-font: 30px
     --main-size-font: 20px
@@ -267,7 +267,7 @@ body
         text-align: center
         margin: 0 auto
         &__link-right, &__link-left
-            font-size: 40px
+            font-size: var(--header-size)
 
     .header
         max-width: 720px
@@ -318,7 +318,7 @@ body
         gap: 40px
         margin-bottom: 106px
         &__text
-            font-size: 30px
+            font-size: var(--highlighted-font)
 
     .gallery
         max-width: 720px
@@ -327,10 +327,11 @@ body
         margin: 0 auto 170px
         &__image
             max-width: 540px
-            margin: 0 auto
+            margin: 0 auto 66px
         &__pic
             width: 100%
             height: auto
+            margin-bottom: 50px
 
     .agenda
         max-width: 720px
@@ -341,7 +342,7 @@ body
         max-width: 720px
         &__title
             width: 100%
-            font-size: 30px
+            font-size: var(--main-size-font)
             margin: 0 auto 80px    // Оставляем нижний отступ
         &__text
             margin: 0 auto
@@ -371,7 +372,7 @@ body
         gap: 40px
         &__link-one,
         &__link-second
-            font-size: 35px
+            font-size: var(--highlighted-font)
 
     .header
         width: 100%
@@ -419,7 +420,7 @@ body
         &__text-one,
         &__text-second,
         &__text-third 
-            font-size: 30px
+            font-size: var(--highlighted-font)
 
     .gallery
         margin: 0 auto 105px
@@ -438,8 +439,7 @@ body
         &__image-star
             margin-bottom: 40px
         &__title
-            font-family: "Roboto Condensed"
-            font-size: 20px
+            font-size: var(--main-size-font)
             margin-bottom: 60px
         &__item
             margin-bottom: 60px
@@ -458,9 +458,9 @@ body
             max-width: 295px
             margin-bottom: 80px
         &__title
-            font-size: 20px
+            font-size: var(--main-size-font)
         &__text
-            font-size: 20px
+            font-size: var(--main-size-font)
             display: flex
             flex-direction: column
             gap: 20px
