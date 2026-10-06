@@ -366,10 +366,32 @@ template {
   margin: 0;
 }
 
-html, body, a, button {
-  cursor: none;
+.custom-cursor {
+  display: none;
 }
 
+@media (hover: hover) {
+  html, body, a, button {
+    cursor: none;
+  }
+  .custom-cursor {
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    background-image: url("../icons/Star-cursor.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease;
+  }
+  .custom-cursor._hovered {
+    transform: translate(-50%, -50%) scale(2) rotate(45deg);
+  }
+}
 body {
   background-color: var(--main-color);
 }
@@ -610,23 +632,6 @@ body {
 }
 .footer__wordmark-image {
   width: 85%;
-}
-
-.custom-cursor {
-  width: 25px;
-  height: 25px;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  background-image: url("../icons/Star-cursor.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: transform 0.3s ease;
-}
-.custom-cursor._hovered {
-  transform: translate(-50%, -50%) scale(2) rotate(45deg);
 }
 
 @media (800px <= width <= 1279px) {

@@ -55,8 +55,29 @@
 *
     margin: 0
 
-html, body, a, button
-    cursor: none
+.custom-cursor    // По умолчанию прячем звездочку на ВСЕХ устройствах (включая телефоны)
+    display: none
+
+@media (hover: hover)    // Включаем и настраиваем её ТОЛЬКО для компьютеров с мышкой
+    html, body, a, button
+        cursor: none
+
+    .custom-cursor
+        display: block    // Показываем курсор только на пк
+        width: 25px
+        height: 25px
+        position: fixed
+        pointer-events: none
+        z-index: 9999
+        transform: translate(-50%, -50%)
+        background-image: url('../icons/Star-cursor.svg')
+        background-size: contain    // масштабирует картинку под размеры 30х30рх
+        background-repeat: no-repeat    // не дублирует картинку знизу, по бокам и тд
+        background-position: center    // выравнивает внутри блока
+        transition: transform 0.3s ease 
+        &._hovered
+            transform: translate(-50%, -50%) scale(2) rotate(45deg)
+
 
 body
     background-color: var(--main-color)
@@ -252,21 +273,6 @@ body
         text-align: center
     &__wordmark-image
         width: 85%
-
-.custom-cursor
-    width: 25px
-    height: 25px
-    position: fixed
-    pointer-events: none
-    z-index: 9999
-    transform: translate(-50%, -50%)
-    background-image: url('../icons/Star-cursor.svg')
-    background-size: contain    // масштабирует картинку под размеры 30х30рх
-    background-repeat: no-repeat    // не дублирует картинку знизу, по бокам и тд
-    background-position: center    // выравнивает внутри блока
-    transition: transform 0.3s ease 
-    &._hovered
-        transform: translate(-50%, -50%) scale(2) rotate(45deg)
 
 @media (800px <= width <= 1279px)
     .menu
