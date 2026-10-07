@@ -15,8 +15,9 @@
 * **Умный адаптив:** Кастомный курсор автоматически скрывается на сенсорных мобильных устройствах с помощью медиазапроса `@media (hover: hover)`.
 
 ## 📱 Адаптив макета:
+<img width="2682" height="11796" alt="127 0 0 1_5500_ (3)" src="https://github.com/user-attachments/assets/9d8cc4f4-8ce6-426b-93f5-924fa9e68f37" />
 <img width="1179" height="16384" alt="127 0 0 1_5500_(iPhone 16)" src="https://github.com/user-attachments/assets/140b6928-c05b-4543-adb4-d22e1cd07a4c" />
 <img width="2064" height="15232" alt="127 0 0 1_5500_(iPad Pro 13)" src="https://github.com/user-attachments/assets/d3d61d1b-c081-4e28-978f-5da0b9b55a35" />
-<img width="5120" height="11796" alt="127 0 0 1_5500_ (2)" src="https://github.com/user-attachments/assets/b0b4265a-5f93-4784-a189-061569d5da58" />
+
 
 
